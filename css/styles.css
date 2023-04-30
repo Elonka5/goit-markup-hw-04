@@ -13,6 +13,7 @@
   --rgba-ocean:rgba(64, 75, 191, 1);
   --rgba-navy-blue: rgba(46, 47, 66, 1);
   --rgba-light-slate: rgba(142, 143, 153, 1);
+  --icon-fill-color:#8e8f99;
 
 }
 
@@ -101,6 +102,7 @@ body {
 /* Header */
 
 .header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
   border-bottom: 1px solid var(--accent-color);
 }
 
@@ -149,6 +151,8 @@ body {
 }
 
 .card-content:hover,
+.card-content:focus,
+.portfolio-item:hover,
 .portfolio-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -217,7 +221,7 @@ body {
   padding-top: 188px;
   padding-bottom: 188px;
   height: 600px;
-  max-width: 1600px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -314,11 +318,14 @@ body {
   margin-bottom: 8px;
 }
 
-.advantages-icon {
-  width: 64px;
-  height: 64px;
-  background-color: var(--rgba-background);
-
+.adv-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: var(--cloud-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 
@@ -434,6 +441,10 @@ body {
   margin-bottom: 48px;
 }
 
+.portfolio-item > .link {
+  display: block;
+
+}
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -496,22 +507,11 @@ body {
 
 .position-footer {
   display: flex;
+  align-items: baseline,
 }
 
 .footer-logo-text {
   margin-right: 120px;
-}
-
-/* Social links */
-
-.social-links {
-  width: 16px;
-  height: 16px;
-}
-
-.size {
-  width: 24px;
-  height: 24px;
 }
 
 
@@ -520,20 +520,24 @@ body {
 .customers-title {
 font-weight: 700;
 font-size: 36px;
-line-height: 1.11;
+line-height: 1.1;
 text-align: center;
 letter-spacing: 0.02em;
 margin-bottom: 72px;
+color: var(--title-text-color);
 }
 
 
 .customer-links {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 168px;
   height: 88px;
   padding: 16px 32px;
   border: 1px solid var(--rgba-light-slate);
   border-radius: 4px;
+  color: var(--icon-fill-color);
 }
 
 .customers-list {
@@ -546,14 +550,12 @@ margin-bottom: 72px;
 }
 
 .customer-icons {
-  width: 104px;
-  height: 56px;
-  fill: var(--rgba-light-slate);
+  fill: currentColor;
 }
 
 .customer-icons:hover,
 .customer-icons:focus {
-  fill: var(--rgba-ocean);
+  fill: var(--cts-color);
 }
 
 .customer-links:hover,
